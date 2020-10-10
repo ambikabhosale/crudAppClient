@@ -1,0 +1,22 @@
+h1
+{
+    color: rgba(69, 77, 189, 0.89);
+    background-color: deeppink;
+}
+
+.header-class {
+    text-align: center;
+    color: white;
+    background-color: #007a73;
+    font-size: 27px;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.stick-city {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 999;
+    padding: 5px;
+}

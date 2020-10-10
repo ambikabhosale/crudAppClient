@@ -1,0 +1,15 @@
+.place-div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.imag-style {
+    width: 25%;
+}
+
+.city-header {
+    background-color: #ececec;
+    padding: 5px;
+}
