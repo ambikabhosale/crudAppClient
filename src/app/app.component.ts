@@ -11,6 +11,7 @@ import { DataService } from './data.service';
 export class AppComponent {
   title = 'This is evaluation test';
   public cityData: any = [];
+  public newCity:any = {};
   constructor(
     public http: HttpClient,
     public dataService: DataService
@@ -22,6 +23,18 @@ export class AppComponent {
       .subscribe(response => {
         console.log("response", response);
         this.cityData = response;
+    });
+  }
+
+  public addCity() {
+    let data: any = {
+      name: this.newCity.name,
+      info: this.newCity.info
+    }
+    this.dataService.addCity(data)
+      .subscribe(response => {
+        console.log("response", response);
+        this.getData();
     });
   }
 

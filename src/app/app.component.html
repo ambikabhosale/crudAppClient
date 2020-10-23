@@ -1,14 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="header-class" (click)="clickEvent()">
-    {{title}}
+  {{title}}
 </div>
 <div style="height:567px;overflow: auto;">
-  <h2 class="stick-city">Top five cities</h2>
-  <section>
-    <app-hyderabad></app-hyderabad>
-    <app-pune></app-pune>
-    <app-bangalore></app-bangalore>
-    <app-chennai></app-chennai>
-    <app-delhi></app-delhi>
-  </section>
+<h2 class="stick-city">Top five cities</h2>
+<section class="add-city-form">
+    <h4>Add more city</h4>
+    <!-- <input class="form-control" [(ngModel)]="newCity.name" type="text" placeholder="city"/>
+    <input type="info" class="form-control" [(ngModel)]="newCity.info" placeholder="info"/>
+    <button class="btn btn-primary" (click)="addCity()">Add</button> -->
+    <form>
+      <div class="form-group">
+        <!-- <label for="exampleInputEmail1">New City</label> -->
+        <input type="text" name="newCity.name" [(ngModel)]="newCity.name"  class="form-control" id="exampleInputEmail1" placeholder="New City">
+      </div>
+      <div class="form-group">
+        <!-- <label>Info</label> -->
+        <textarea class="form-control" name="newCity.info" placeholder="Info" [(ngModel)]="newCity.info" rows="3"></textarea>
+      </div>
+      <button (click)="addCity()" class="btn btn-primary btn-sm">Submit</button>
+    </form>
+</section>
+<section>
+  <app-hyderabad [data]="cityData"></app-hyderabad>
+  <!-- <app-pune></app-pune>
+  <app-bangalore></app-bangalore>
+  <app-chennai></app-chennai>
+  <app-delhi></app-delhi> -->
+</section>
 </div>
